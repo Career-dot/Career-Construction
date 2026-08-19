@@ -177,14 +177,26 @@
   .specs-grid{
     display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line);
   }
-  .spec{
-    padding:28px 24px 24px 0; border-right:1px solid var(--line);
-    position:relative;
-  }
+.spec {
+    padding: 28px 24px 24px;
+    border-right: 1px solid var(--line);
+    position: relative;
+    text-align: center;
+}
   .spec:last-child{border-right:none;}
-  .spec .num{ font-family:'Anton',sans-serif; font-size:56px; line-height:1; display:flex; align-items:baseline; gap:4px;}
+  .spec .num {
+    font-family:'Anton',sans-serif;
+    font-size:56px;
+    line-height:1;
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+    gap:4px;
+}
   .spec .num .unit{font-family:'Space Mono',monospace; font-size:18px; color:var(--orange);}
+  
   .spec .label{ margin-top:10px; font-size:14px; color:var(--steel); text-transform:uppercase; letter-spacing:0.04em;}
+  
   .spec::before{
     content: attr(data-tick);
     position:absolute; top:0; right:8px;
@@ -210,7 +222,7 @@
     display:flex; flex-direction:column; justify-content:space-between;
     transition:background .25s ease, color .25s ease;
   }
-  .service-card:hover{ background:var(--ink); color:var(--paper); }
+  .service-card:hover{ background:var(--steel); color:var(--paper); }
   .service-card:hover .service-index{ color:var(--yellow); }
   .service-index{ font-family:'Space Mono',monospace; font-size:13px; color:var(--steel-light); transition:color .25s ease;}
   .service-card h3{ font-family:'Anton',sans-serif; font-size:24px; margin-top:36px; text-transform:uppercase; }
@@ -245,7 +257,7 @@
   .project-grid{
     display:grid; grid-template-columns:repeat(3,1fr); gap:2px;
   }
-  .project-card{ position:relative; overflow:hidden; aspect-ratio:4/5; }
+  .project-card{ position:relative; overflow:hidden; aspect-ratio:5/5; }
   .project-card img{ width:100%; height:100%; object-fit:cover; transition:transform .5s cubic-bezier(.2,.8,.2,1); filter:grayscale(0.15) contrast(1.05);}
   .project-card:hover img{ transform:scale(1.06); }
   .project-overlay{
